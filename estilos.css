@@ -40,12 +40,6 @@ h1{
         margin-inline: 200px;
         } 
 
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
-  gap: 10px;
-}
-
         img { 
             width: 400px; 
              } 
