@@ -43,3 +43,10 @@ h1{
         img { 
             width: 400px; 
              } 
+
+             .galeria {
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* centra as imagens */
+    flex-wrap: wrap; /* evita problemas em ecrãs pequenos */
+}
