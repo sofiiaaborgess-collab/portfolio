@@ -43,14 +43,10 @@ h1{
         img { 
             width: 400px; 
              } 
-
-         .galeria {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
 .galeria {
     display: grid;
+     display: flex;
     grid-template-columns: 1fr 1fr; 
     gap: 20px;
+    justify-content: center;
 }
