@@ -42,8 +42,9 @@ h1{
 
         img { 
             width: 400px; 
+            align-items: center;
              } 
-             
+
 .galeria {
     display: grid;
      display: flex;
