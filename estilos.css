@@ -17,13 +17,13 @@ ul{
 
 h1{
     color: rgb(177, 209, 244);
-    text-align: center;
-    font-size: 50px;
+    text-align: left;
+    font-size: 60px;
 }
 
 p{
     color: rgb(0, 0, 0);
-    text-align: center;
+    text-align: left;
     font-size: 17px;
     }
 
@@ -39,7 +39,7 @@ p{
    main{
     max-width: 800px;   
     margin: 20px auto;   
-    padding: 20px;       
+    padding: 20px;
     background-color:rgb(255, 255, 255); 
     border-radius: 10px; 
      }
@@ -52,6 +52,16 @@ p{
         img { 
             width: 400px; 
              } 
+             
+.apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.foto-direita {
+    width: 400px;
+}
 
 .galeria {
     display: grid;
