@@ -1,79 +1,114 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
+/* 1. Configurações Gerais e Tipografia */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Fontes mais modernas */
     background-color: rgb(245, 249, 248);
-    margin: 0px;
-    padding: 0px;
-}
-
-a{
-color: rgb(174, 218, 202);
-text-decoration: none;
-}
-
-ul{
-    list-style-type: none;
+    margin: 0;
     padding: 0;
+    color: rgb(50, 50, 50); /* Texto ligeiramente cinzento para ser menos agressivo que o preto puro */
+    line-height: 1.6; /* Dá espaço entre as linhas de texto */
 }
 
-h1{
-    color: rgb(174, 218, 202);
-    text-align: left;
-    font-size: 60px;
+/* 2. Cabeçalho / Menu de Navegação */
+#cabecalho {
+    background-color: white; /* Fundo branco destaca o menu do fundo do site */
+    border-bottom: rgb(174, 218, 202) solid 3px; /* Linha mais fina e elegante apenas em baixo */
+    padding: 10px 0;
 }
 
-h2{
-    color: rgb(174, 218, 202);
-    text-align: center;
-    font-size: 60px;
+#cabecalho ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Alinha os itens em linha automaticamente */
+    justify-content: center; /* Centra o menu no ecrã */
+    gap: 40px; /* Cria um espaçamento perfeito e igual entre os links */
 }
 
-p{
-    color: rgb(0, 0, 0);
-    text-align: left;
-    font-size: 17px;
-    }
-
-#cabecalho{
-    background-color: rgb(245, 249, 248);
-    border:rgb(174, 218, 202) solid 5px;
-    margin: 0px;
-    padding: 5px;
+#cabecalho a {
+    color: rgb(120, 160, 145); /* Um tom ligeiramente mais escuro para ler melhor */
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase; /* Letras maiúsculas no menu ficam muito bem */
+    font-size: 14px;
+    letter-spacing: 1px; /* Espaço entre as letras */
+    transition: color 0.3s ease; /* Animação suave quando passas o rato */
 }
-#cabecalho a{
-    color: rgb(174, 218, 202);     
-    }
-    
-   main{
-    max-width: 800px;   
-    margin: 20px auto;   
+
+#cabecalho a:hover {
+    color: rgb(174, 218, 202); /* Muda de cor ao passar o rato (Efeito Hover) */
+}
+
+/* 3. Corpo Principal */
+main {
+    max-width: 900px; /* Um pouco mais largo para a galeria respirar */
+    margin: 40px auto;   
     padding: 20px;
-    background-color:rgb(245, 249, 248); 
-    border-radius: 10px; 
-     }
+}
 
-     #cabecalho li{ 
-        display: inline-block; 
-        margin-inline: 200px;
-        } 
+/* 4. Títulos e Textos */
+h1 {
+    color: rgb(130, 180, 160);
+    font-size: 42px; /* Reduzi um pouco para não ficar gigante em portáteis */
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
 
-        img { 
-            width: 400px; 
-             } 
+h2 {
+    color: rgb(130, 180, 160);
+    text-align: left; /* Títulos alinhados à esquerda ficam mais editoriais */
+    font-size: 28px;
+    margin-top: 60px; /* Dá espaço entre as secções de trabalhos */
+    margin-bottom: 20px;
+    border-left: 4px solid rgb(174, 218, 202); /* Linha vertical decorativa ao lado do título */
+    padding-left: 15px;
+}
 
+p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* 5. Layouts (Flexbox e Grid fáceis) */
 .apresentacao {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 40px; /* Espaço entre o texto e a foto */
 }
 
 .foto-direita {
-    width: 400px;
+    width: 350px;
+    height: auto;
+    border-radius: 20px; /* Cantos arredondados na tua foto */
 }
 
+/* A tua galeria corrigida (retirei o display:flex que estava a chocar com o grid) */
 .galeria {
     display: grid;
-     display: flex;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr; /* Duas colunas perfeitas */
     gap: 20px;
-    justify-content: center;
 } 
+
+.galeria img, .galeria video { 
+    width: 100%; /* A imagem adapta-se ao tamanho da coluna do grid */
+    height: auto;
+    border-radius: 8px; /* Cantos ligeiramente arredondados nas imagens dos trabalhos */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Sombra muito subtil para dar profundidade */
+}
+
+/* Link do CV no contacto */
+.cv-link {
+    display: inline-block;
+    background-color: rgb(174, 218, 202);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.cv-link:hover {
+    background-color: rgb(140, 190, 170);
+}
